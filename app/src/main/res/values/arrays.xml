@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="xposed_scope">
+        <!-- By default, we'll target android system for device info spoofing -->
+        <item>android</item>
+        <!-- Add more target packages here if needed -->
+    </string-array>
+</resources>

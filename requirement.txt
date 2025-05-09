@@ -1,0 +1,15 @@
+Target: Xposed hooking method to change, fake, spoof information about the device
+like (IMEI, BRAND, BUILD ID, PRODUCT, MODEL, DEVICE, Hardware Serial, PHONE NUMBER, SIM IMSI, BOOTLOADER, FRINTERPRINT)
+all the data that to be new device with new info.
+I need an app written in Kotlin (highly recommended) that when i run command in shell,
+it will change info for me.
+
+Technology used: Kotlin app in gradle, YukiHookApi in https://github.com/HighCapable/YukiHookAPI
+
+I want UI like ./img.png so that i can see the props and i can changed it. I also want to call this app in terminal,
+it will change all props for me, no need to pass props to this command.
+We'll request to this site #fetch https://www.myfakeinfo.com/mobile/get-android-device-information.php to get all
+information about random information and we based from that so change the information in my device.
+
+References:
+- Example github project: https://github.com/Android1500/AndroidFaker
