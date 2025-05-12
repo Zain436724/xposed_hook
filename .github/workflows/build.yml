@@ -1,11 +1,15 @@
 name: Build and Release APK
-run: chmod +x ./gradlew
 
 on:
   push:
     tags:
       - 'v*' # Trigger only on version tags like v1.0.0
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
+
+permissions: 
+  contents: write   # Allows creating releases and uploading assets
+  packages: write   # (Optional if using GitHub Packages)
+  actions: read
 
 jobs:
   build:
@@ -20,6 +24,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Build Release APK
         run: ./gradlew assembleRelease
