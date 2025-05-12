@@ -1,4 +1,5 @@
 name: Build and Release APK
+run: chmod +x ./gradlew
 
 on:
   push:
